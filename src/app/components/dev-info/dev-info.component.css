@@ -1,0 +1,37 @@
+
+.techDetails{
+    height: 10%;
+    background-color: #cecece;
+    padding-top: 25px;
+    font-style: italic;
+    padding-bottom: 15px;
+}
+
+.techDetails span{
+    padding-left: 10px;
+}
+
+.techDetailsRow {
+    padding-bottom: 8px;
+}
+
+span.eleCode{
+    padding-right: 50px;
+}
+
+span.token{
+    padding-right: 25px;
+}
+
+span.vccode{
+    padding-right: 10px;
+}
+
+.links {
+    margin-top: 5px;
+    padding-left: 10px;
+}
+
+.links a {
+    padding-right: 22px;
+}

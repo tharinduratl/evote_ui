@@ -1,0 +1,36 @@
+<div>
+  <h1 class="header1">Cast Your Vote</h1>
+</div>
+<div class="voteSection">
+  <div>
+    <span class="pd-right">Party Name</span>
+    <mat-form-field appearance="fill">
+      <mat-select [(ngModel)]="selectedParty">
+        <mat-option *ngFor="let party of parties" [value]="party.code">
+          {{party.name}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <span class="pd-right">Candidate</span>
+    <mat-form-field appearance="fill">
+      <mat-select [(ngModel)]="selectedCandidate">
+        <mat-option *ngFor="let candidateNo of candidates" [value]="candidateNo">
+          {{candidateNo}}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" (click)="castVote()">Vote</button>
+  </div>
+  <div *ngIf="votingError">
+    <div class="errorContainer" >
+      <div class="errorBox">
+        <div><mat-icon aria-hidden="false" aria-label="">warning</mat-icon></div> 
+          <div> {{voterErrorMsg}}</div>
+      </div>
+    </div>
+  </div>
+</div>

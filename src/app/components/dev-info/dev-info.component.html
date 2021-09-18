@@ -1,0 +1,27 @@
+<div class="techDetails">
+  <form>
+    <div class="techDetailsRow">
+      <span class="token">Vote Temp Token: </span>
+      <input type="text" autocomplete="off" id="tempToken" name="tempToken" 
+       [(ngModel)]="tempToken" (focusout)="onFocusOutEvent($event)"/>
+    </div>
+
+    <div class="techDetailsRow techSeperator">
+      <span class="eleCode">Election Code: </span>
+      <input type="text" autocomplete="off" id="electionCode" name="electionCode" 
+        [(ngModel)]="electionCode" (focusout)="onFocusOutEvent($event)"/>
+    </div>
+    <div class="techDetailsRow">
+      <span class="vccode">Voting Center Code: </span>
+      <input type="text" autocomplete="off" id="votingCenterCode" name="votingCenterCode" 
+        [(ngModel)]="votingCenterCode" (focusout)="onFocusOutEvent($event)"/>
+    </div>
+  </form>
+
+  <div class="links">
+    <a href="/voter-login">Voter Login</a>
+    <a href="/vote">Cast Vote</a>
+    <a href="/vote-validation">Vote Verification</a>
+    <a href="/election-results">Election Results</a>
+  </div>
+</div>

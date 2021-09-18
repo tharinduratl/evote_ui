@@ -1,0 +1,20 @@
+{
+    "voters":{
+        "data":
+            {
+                "votingToken": "6b9efe837a552110e11d99794a63c68f578f1641",
+                "status": "VALID"
+            }
+    },
+    "votes":[
+        {
+            "votingToken": "6b9efe837a552110e11d99794a63c68f578f1641",
+            "status": "SUCCESS"
+        },
+        {
+            "votingToken": "",
+            "status": "FAILURE"
+        }
+    ]
+    
+}

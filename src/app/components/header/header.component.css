@@ -1,0 +1,21 @@
+.header-section {
+    width: 24%;
+    float: left;
+    text-align: center;
+    color: white;
+}
+
+.header-row {
+    background-color: #673ab7;
+    padding: 10px 0px;
+    margin-bottom: 50px;
+}
+
+.header-border{
+    border-right: 1px white solid;
+}
+
+.header-title{
+    font-weight: 500;
+    font-size: 20px;
+}

@@ -1,0 +1,59 @@
+<div class="electionResults">
+  <div class="eleResTitle">Election Results - 2025</div>
+  <div class="eleResFilterBar">
+    <div class="filterComponent">
+      <span class="pd-right">Polling District</span>
+      <mat-form-field appearance="fill">
+        <mat-select [(ngModel)]="selectedDistrict">
+          <mat-option *ngFor="let district of pollingDistricts" [value]="district.code">
+            {{district.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="filterComponent">
+      <span class="pd-right">Political Party</span>
+      <mat-form-field appearance="fill">
+        <mat-select [(ngModel)]="selectedParty">
+          <mat-option *ngFor="let party of parties" [value]="party.code">
+            {{party.name}}
+          </mat-option>
+        </mat-select>
+      </mat-form-field>
+    </div>
+    <div class="filterComponent">
+      <button mat-raised-button color="primary" (click)="loadElectionResults()">View Results</button>
+    </div>
+    <br clear="both"/>
+  </div>
+  <div class="eleResContainer">
+    <div class="elePartyResults" *ngIf="partyResults?.length > 0">
+      <div class="divTable">
+        <div class="divTableBody">
+          <div class="divTableRow divTableHeading">
+            <div class="divTableCell">Political Party</div>
+            <div class="divTableCell">Number of Votes</div>
+          </div>
+          <div class="divTableRow"  *ngFor="let result of partyResults;">
+            <div class="divTableCell">{{result.code}}</div>
+            <div class="divTableCell">{{result.votes}}</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="eleCandidateResults" *ngIf="candidateResults?.length > 0">
+      <div class="divTable">
+        <div class="divTableBody">
+          <div class="divTableRow divTableHeading">
+            <div class="divTableCell">Candidate Number</div>
+            <div class="divTableCell">Number of Votes</div>
+          </div>
+          <div class="divTableRow" *ngFor="let result of candidateResults; ">
+            <div class="divTableCell">{{result.code}}</div>
+            <div class="divTableCell">{{result.votes}}</div>
+          </div>
+        </div>
+      </div>
+  
+    </div>
+</div>

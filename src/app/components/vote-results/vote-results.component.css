@@ -1,0 +1,38 @@
+.header1{
+    text-align: center;
+}
+
+.votedContainer{
+        text-align: center;
+        font-size: 18px;
+        width: 80%;
+        margin: 0 auto;
+        background-color: green;
+        color: white;
+        font-weight: bold;
+        padding: 10px 0px;
+}
+
+.refDetails{
+    margin-top: 5px;
+    font-weight: 500;
+}
+
+.voteRedirection {
+    font-size: 14px;
+    padding-top: 10px;
+    font-weight: normal;
+}
+
+.errorContainer{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.errorBox {
+    padding: 5px 100px;
+    background: #c30808;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #aaaaaa;
+}

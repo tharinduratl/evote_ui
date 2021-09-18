@@ -1,0 +1,55 @@
+<div>
+  <h1 class="header1">Enter Vote Token</h1>
+</div>
+<div class="voterdetail">
+  <div>
+    <form>
+      <mat-form-field appearance="fill">
+        <mat-label>Vote Token</mat-label>
+        <input type="text" matInput [formControl]="idFormControl" placeholder=""  autocomplete="off" [(ngModel)]="tokenCode" name="tokenCode">
+        <mat-error *ngIf="idFormControl.hasError('required')">
+          Please enter a vote token
+        </mat-error>
+      </mat-form-field>
+    </form>
+  </div>
+  <div>
+    <button mat-raised-button color="primary" class="validateBtn"  (click)="validateVoter()">Validate</button>
+  </div>
+  <div *ngIf="votingError">
+    <div class="errorContainer" >
+      <div class="errorBox">
+        <div><mat-icon aria-hidden="false" aria-label="">warning</mat-icon></div> 
+          <div> Invalid vote token!</div>
+      </div>
+    </div>
+  </div>
+  <div class="divTable" *ngIf="voteStatus">
+    <div class="divTableBody">
+      <div class="divTableRow">
+        <div class="divTableCell datacol">Vote Status</div>
+        <div class="divTableCell">{{voteStatus.status}}</div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell datacol">Voter ID</div>
+        <div class="divTableCell">{{voteStatus.voterId}}</div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell datacol">Election</div>
+        <div class="divTableCell">{{voteStatus.electionCode}}</div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell datacol">Voting Center</div>
+        <div class="divTableCell">{{voteStatus.votingCenterCode}}</div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell datacol">Voted Time</div>
+        <div class="divTableCell">{{voteStatus.votedTimestamp}}</div>
+      </div>
+      <div class="divTableRow">
+        <div class="divTableCell datacol">Token</div>
+        <div class="divTableCell">{{voteStatus.token}}</div>
+      </div>
+    </div>
+  </div>
+</div> 

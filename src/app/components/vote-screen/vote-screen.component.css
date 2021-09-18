@@ -1,0 +1,27 @@
+.header1{
+    text-align: center;
+}
+
+.voteSection {
+    text-align: center;
+}
+
+.pd-right{
+    padding-right: 2%;
+}
+
+.voteSection .mat-raised-button {
+    padding: 0.5% 8%;
+}
+.errorContainer{
+    width: 30%;
+    margin: 0 auto;
+    margin-top: 30px;
+}
+
+.errorBox {
+    padding: 5px 100px;
+    background: #c30808;
+    color: #ffffff;
+    box-shadow: 1px 1px 1px #aaaaaa;
+}
