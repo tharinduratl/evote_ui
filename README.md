@@ -1,6 +1,8 @@
-# HlfTest
+# evote_ui
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 7.3.8.
+
+This is the user interface application for the blockchain based evoting app
 
 ## Development server
 
